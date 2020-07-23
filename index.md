@@ -20,9 +20,9 @@ permalink: /
   {% assign link = lang.key | prepend: './' | append: '/' | relative_url %}
   {% assign flag = './static/flags/' | append: lang.flag | append: '.svg' | relative_url %}
   <p>
-    <a href="{{link}}">
-      <img class="flag" src="{{flag}}" alt="{{lang.name}}">
+    <a href="{{ site.url }}{{link}}">
+      <img class="flag" src="{{ site.url }}{{flag}}" alt="{{lang.name}}">
     </a>
-    <a href="{{link}}">{{lang.name}}</a>
+    <a href="{{ site.url }}{{link}}">{{lang.name}}</a>
   </p>
 {% endfor %}

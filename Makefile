@@ -8,12 +8,18 @@ commands :
 ## site : rebuild GitHub Pages site locally.
 site : _data/glossary.yml
 	rm -rf .jekyll-cache .jekyll-metadata _site
-	bundle exec jekyll build
+	bundle exec jekyll build --config _config.yml,_config_dev.yml
+
+## site : rebuild GitHub Pages site locally.
+gh-site : _data/glossary.yml
+	rm -rf .jekyll-cache .jekyll-metadata _site
+	bundle exec jekyll build --config _config.yml
+
 
 ## serve : serve GitHub Pages site locally.
 serve : _data/glossary.yml
 	rm -rf _site
-	bundle exec jekyll serve -I
+	bundle exec jekyll serve -I --config _config.yml,_config_dev.yml
 
 ## clean : clean up unneeded files.
 clean :

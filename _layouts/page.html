@@ -1,7 +1,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <title>{{site.title}}</title>
-    <link href="{{ '/static/site.css' | relative_url }}" rel="stylesheet" type="text/css">
+    <link href="{{ site.url }}{{ '/static/site.css' | relative_url }}" rel="stylesheet" type="text/css">
   </head>
   <body>
     <main>
@@ -9,9 +9,9 @@
     </main>
     <footer>
       <p>
-        <a href="{{'/' | relative_url}}">Home</a>
+        <a href="{{ site.url }}{{'/' | relative_url}}">Home</a>
         -
-        <a href="{{'/license/' | relative_url}}">License</a>
+        <a href="{{ site.url }}{{'/license/' | relative_url}}">License</a>
         -
         <a href="https://github.com/carpentries/glosario/">GitHub</a>
       </p>
